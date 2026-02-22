@@ -1,0 +1,46 @@
+---
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import {Icon} from "astro-icon/components";
+const pathname = new URL(Astro.request.url).pathname;
+const links = [
+    {href: "/", label: "Home"},
+    {href: "/about", label: "About"},
+    {href: "/events", label: "Events"},
+    // {href: "/gallery", label: "Gallery"},
+    {href: "/contact", label: "Contact"},
+];
+---
+
+<div class="lg:flex justify-between gap-5 mx-auto bg-gray-200">
+    <Astronav closeOnClick={true}>
+        <div class="flex w-full lg:w-auto justify-between p-5">
+            <a href="/" class="inline-flex items-center text-lg">Five of a Kind</a>
+            <div class="block lg:hidden">
+                <MenuIcon class="w-8 h-8 text-gray-800" />
+            </div>
+        </div>
+        <MenuItems class="hidden lg:flex text-center p-5 bg-white lg:bg-transparent">
+            <ul class="flex flex-col lg:flex-row gap-5 text-xl lg:text-lg">
+                {links.map(link => (
+                    <li><a href={link.href} class={pathname == link.href ? "border-b-black border-b-2" : ""}>{link.label}</a></li>
+                ))}
+                <li>
+                    <div class="flex mx-auto h-full justify-center">
+                        <a href="https://www.facebook.com/profile.php?id=61570025699842" target="_blank" rel="noopener noreferrer">
+                            <Icon name="facebook" class="text-xl mx-2 h-full" />
+                        </a>
+                        <a href="https://www.instagram.com/fiveofakindbrass/" target="_blank" rel="noopener noreferrer">
+                            <Icon name="instagram" class="text-xl mx-2 h-full" />
+                        </a>
+                        <a href="https://www.youtube.com/@JustinPrivitera" target="_blank" rel="noopener noreferrer">
+                            <Icon name="youtube" class="text-xl mx-2 h-full" />
+                        </a>
+                        <a href="https://soundcloud.com/five-of-a-kind" target="_blank" rel="noopener noreferrer">
+                            <Icon name="soundcloud" class="text-xl mx-2 h-full" />
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </MenuItems>
+    </Astronav>
+</div>

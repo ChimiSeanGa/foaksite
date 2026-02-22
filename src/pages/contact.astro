@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+    <div class="text-3xl text-center my-5">Contact Us</div>
+    <div class="m-5 text-center">
+        <h3 class="text-xl">Five of a Kind is available for booking!</h3>
+        <!--<p>Email us at <a href="mailto:fiveofakindbrass@gmail.com">fiveofakindbrass@gmail.com</a></p>-->
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="06485a4a-93ee-4c37-98c5-d5ff2de1983f">
+            <div class="w-[300px] text-left m-auto flex flex-col mt-2">
+                <label for="name">Name</label>
+                <input id="name" class="border border-gray-300 focus:border-blue-500 focus:ring-blue-500" type="text" name="name" required>
+            </div>
+            <div class="w-[300px] text-left m-auto flex flex-col mt-2">
+                <label for="email">Email</label>
+                <input id="email" class="border border-gray-300 focus:border-blue-500 focus:ring-blue-500" type="email" name="email" required>
+            </div>
+            <div class="w-[300px] text-left m-auto flex flex-col mt-2">
+                <label for="message">Message</label>
+                <textarea id="message" class="border border-gray-300 focus:border-blue-500 focus:ring-blue-500 h-[100px]" name="message" required></textarea>
+            </div>
+            <button type="submit" class="mt-2 rounded-xl bg-blue-500 px-2 py-1 text-white cursor-pointer">Submit</button>
+        </form>
+    </div>
+</Layout>

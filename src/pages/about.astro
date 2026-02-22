@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {Image} from "astro:assets";
+import seanPhoto from '../assets/sean.jpeg';
+import jordanPhoto from '../assets/jordan.jpeg';
+import francisPhoto from '../assets/francis.jpeg';
+import justinPhoto from '../assets/justin.jpg';
+import davidPhoto from '../assets/david.jpeg';
+---
+
+<Layout>
+    <div class="text-3xl text-center my-5">Our Members</div>
+    <div class="w-[80%] mx-auto">
+        <div class="flex flex-col md:flex-row m-5 gap-5 items-center">
+            <Image src={justinPhoto} alt="Photo of Justin" class="max-w-[300px] h-auto" />
+            <p><b>Justin Privitera</b>, french horn, grew up in San Mateo, playing horn since the 6th grade. He studied Computer Science, Mathematics, and minored in music at Cal Poly SLO, where he played in a brass quintet called Five's a Crowd with some of the same members of the current Five of a Kind. He currently lives in Hayward and works as a software engineer, splitting his time between directing a men's choir, singing with a mixed choir, playing with the Peninsula Symphony, playing with Five of a Kind, and taking part in many other musical pursuits around the Bay Area.</p>
+        </div>
+        <div class="w-full border-b-gray-500 border-1"></div>
+        <div class="flex flex-col md:flex-row m-5 gap-5 items-center">
+            <Image src={jordanPhoto} alt="Photo of Jordan" class="max-w-[300px] h-auto" />
+            <p><b>Jordan Tom</b>, trombone, native to the Bay Area, was introduced to the world of music at a young age at home and at Davies Symphony Hall, picking up the trombone at 8 after seeing his inspiration — his brother — perform solos and band pieces. Having won multiple solo and ensemble awards in youth music competitions, Jordan continued his endeavors with music in university while studying Construction Management. He joined and became an invaluable member to the brass quintet, Five of a Kind, trying their hand at everything from Dixieland Jazz to contemporary classical charts. Ever since, Jordan has enjoyed performing with the group.</p>
+        </div>
+        <div class="w-full border-b-gray-500 border-1"></div>
+        <div class="flex flex-col md:flex-row m-5 gap-5 items-center">
+            <Image src={seanPhoto} alt="Photo of Sean" class="max-w-[300px] h-auto" />
+            <p><b>Sean Gonzales</b>, trumpet, grew up in Bakersfield and attended Cal Poly SLO for his undergraduate studies in mathematics and computer science. While at Cal Poly, he played trumpet in the marching band, wind ensemble, and various small ensembles. He graduated in 2019 and worked as a software engineer at Apple. Sean is currently pursuing his PhD in mathematics at UC Berkeley. Outside of his academic life, he likes to bike, hike, produce visual art, and jam on many different instruments with other musicians.</p>
+        </div>
+        <div class="w-full border-b-gray-500 border-1"></div>
+        <div class="flex flex-col md:flex-row m-5 gap-5 items-center">
+            <Image src={davidPhoto} alt="Photo of David" class="max-w-[300px] h-auto" />
+            <p><b>David Rich</b>, trumpet, is from Los Altos, California and is a sophomore at the University of California, Berkeley, where he majors in Physics. He started playing trumpet at five years old, and has performed in many Bay Area youth orchestras, including the San Francisco Symphony Youth Orchestra, and he currently plays with the UC Berkeley Symphony Orchestra. Outside of music, David is a licensed private pilot and enjoys flying and being outdoors in his free time.</p>
+        </div>
+        <div class="w-full border-b-gray-500 border-1"></div>
+        <div class="flex flex-col md:flex-row m-5 gap-5 items-center">
+            <Image src={francisPhoto} alt="Photo of Francis" class="max-w-[300px] h-auto" />
+            <p><b>Francis Upton IV</b>, tuba, has been playing since the mid 70’s. They have performed with many orchestras and bands, notably the Peninsula Symphony and San Francisco Brass Band. They currently perform with the Oakland Civic Orchestra and Oakland Municipal Band. An avid chamber music player, and attendee of the Cal Poly Humboldt Brass Chamber Music Workshop, they have performed in many chamber groups over the years. Their day gig is being the CTO of SnapStrat.</p>
+        </div>
+    </div>
+</Layout>

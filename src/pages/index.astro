@@ -1,11 +1,27 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import { Image } from 'astro:assets';
+import foakImage from '../assets/foak_bg.jpg';
+import EventsList from "../components/EventsList.astro";
 ---
 
 <Layout>
-	<div>Site coming soon!</div>
+	<div>
+		<Image src={foakImage} alt="Five of a Kind brass quintet performing on stage" />
+	</div>
+	<div class="text-3xl text-center mt-5">Brass Quintet based in the Bay Area</div>
+	<div class="p-5 text-center text-xl">
+		<p>Five of a Kind is a Bay Area-based brass quintet. We've performed at events such as:</p>
+		<ul class="list-disc list-inside inline-block text-left mt-3">
+			<li>Farmers markets</li>
+			<li>Winter concert with Ragazzi Continuo men's chorus</li>
+			<li>Charity run at Lawrence Livermore National Lab</li>
+			<li>Afternoon shows at senior living centers</li>
+			<li>Lobby performance before band concerts</li>
+		</ul>
+		<p class="font-bold mt-5">If you'd like to book us, please <a class="text-blue-500 hover:underline" href="/contact">reach out!</a></p>
+	</div>
+	<div class="mt-5">
+		<EventsList />
+	</div>
 </Layout>

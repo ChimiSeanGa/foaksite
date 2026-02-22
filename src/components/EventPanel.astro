@@ -1,0 +1,26 @@
+---
+import { PortableText } from "@portabletext/react";
+import { Image } from 'astro:assets';
+
+const {
+    title,
+    slug,
+    startDate,
+    location,
+    description,
+    imageUrl,
+} = Astro.props;
+---
+
+<div class="p-3 m-3 flex border-t-2">
+    <div>
+        <a href=`/events/${slug.current}`>
+            <Image src={imageUrl} alt="" width={200} height={200} />
+        </a>
+    </div>
+    <div class="ml-5">
+        <h1 class="text-2xl"><a href=`/events/${slug.current}`>{title}</a></h1>
+        <h2 class="mb-3">{location} · {new Date(startDate).toLocaleString()}</h2>
+        <PortableText value={description} />
+    </div>
+</div>

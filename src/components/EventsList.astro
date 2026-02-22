@@ -1,0 +1,25 @@
+---
+import {sanity} from "../lib/sanity";
+import {upcomingEventsQuery} from "../lib/queries";
+import EventPanel from "./EventPanel.astro";
+const events = await sanity.fetch(upcomingEventsQuery)
+---
+
+<h1 class="text-3xl ml-5 text-center">Upcoming Events</h1>
+
+{events.length === 0 && <p>No upcoming events.</p>}
+
+<ul>
+    {events.map(event => (
+            <li>
+                <EventPanel
+                        title={event.title}
+                        slug={event.slug}
+                        startDate={event.startDate}
+                        location={event.location}
+                        description={event.description}
+                        imageUrl={event.imageUrl}
+                />
+            </li>
+    ))}
+</ul>
