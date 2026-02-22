@@ -15,4 +15,5 @@ export default defineConfig({
 
   integrations: [react(), icon()],
   output: "static",
+  trailingSlash: 'never',
 });
