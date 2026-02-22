@@ -1,8 +1,7 @@
 ---
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import {Icon} from "astro-icon/components";
-const pathname = Astro.url.pathname;
-console.log(pathname);
+const pathname = Astro.url.pathname.replace(/\/$/, "");
 const links = [
     {href: "/", label: "Home"},
     {href: "/about", label: "About"},
