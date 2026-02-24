@@ -20,7 +20,14 @@ const {
     </div>
     <div class="ml-5">
         <h1 class="text-2xl"><a href=`/events/${slug.current}`>{title}</a></h1>
-        <h2 class="mb-3">{location} · {new Date(startDate).toLocaleString()}</h2>
+        <h2 class="mb-3">{location} · {new Date(startDate).toLocaleString('en-US', {
+            timeZone: 'America/Los_Angeles',
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+        })}</h2>
         <PortableText value={description} />
     </div>
 </div>
