@@ -1,48 +1,41 @@
-# Astro Starter Kit: Basics
+# Five of a Kind Brass Quintet Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+## Project Structure
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Astro organizes files in a standard structure:
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+*   `src/pages/`: Markdown (`.md`), Astro (`.astro`), or other component files here become pages on your site automatically.
+*   `src/content/`: Recommended for content collections (like blog posts) with schema validation.
+*   `src/layouts/`: Reusable layouts for your pages.
+*   `src/components/`: Reusable UI components.
+*   `public/`: Static assets (fonts, images, etc.) that are copied to the final build directory as-is.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Installation and Setup
 
-## 🚀 Project Structure
+### Prerequisites
 
-Inside of your Astro project, you'll see the following folders and files:
+*   Node.js (v18.0.0 or later)
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+### Steps
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/ChimiSeanGa/foaksite.git
+    cd foaksite
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-## 🧞 Commands
+## Running the Project
 
-All commands are run from the root of the project, from a terminal:
+Use the following commands to work with the project:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+| Command | Action |
+| :--- | :--- |
+| `npm run dev` | Starts the local development server at `localhost:4321`. |
+| `npm run build` | Builds your production site to the `./dist/` directory. |
+| `npm run preview` | Previews your build locally before deploying. |
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
